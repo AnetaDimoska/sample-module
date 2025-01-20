@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function BookmarkButton() {
-  const [isBookmarked, setIsBookmarked] = useState(false);
+  const [isBookmarked, setIsBookmarked] = useState<boolean>(false);
 
   // Toggle bookmark state
   const toggleBookmark = () => {
@@ -9,7 +9,7 @@ export default function BookmarkButton() {
   };
 
   return (
-    <div className="flex items-center gap-2 mt-6">
+    <div className="flex items-center gap-2 lg:mt-6">
       <button
         onClick={toggleBookmark}
         className={`relative w-8 h-8 flex items-center justify-center rounded-md transition-all `}
@@ -24,6 +24,7 @@ export default function BookmarkButton() {
           <path
             d="M6 2a2 2 0 0 0-2 2v18l8-4 8 4V4a2 2 0 0 0-2-2H6z"
             className={!isBookmarked ? "fill-white" : "fill-teal-500"}
+               data-testid="bookmark-icon"
           />
         </svg>
 

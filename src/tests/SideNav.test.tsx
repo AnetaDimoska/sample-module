@@ -8,7 +8,7 @@ describe("SideNav Component", () => {
   it("should renders the sidebar with logo and all navigation items", () => {
     render(
       <MemoryRouter>
-        <SideNav />
+        <SideNav isOpen={true} onClose={() => {}} />
       </MemoryRouter>
     );
 
